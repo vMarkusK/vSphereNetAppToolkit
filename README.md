@@ -45,3 +45,5 @@ New-VsphereNetappVolume -VolName vol_vmware_11 -VolSize 1 -vSphereCluster Cluste
 -NetAppInterface svm-nfs_data -NetAppSnapshotPolicy default-1weekly
 ```
 
+![New-VsphereNetappVolume](/media/New-VsphereNetappVolume.png)
+
