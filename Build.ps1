@@ -272,7 +272,7 @@ Task GenerateMarkdown -requiredVariables DefaultLocale, DocsRootDir, ModuleName,
                          -WithModulePage:$false -ErrorAction SilentlyContinue -Verbose:$VerbosePreference > $null
     }
     finally {
-        Remove-Module $ModuleName
+        Remove-Module $ModuleName -Force
     }
 }
 
