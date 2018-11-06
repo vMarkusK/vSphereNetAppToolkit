@@ -2,25 +2,25 @@
 
 ## About
 
-### Project Owner:
+### Project Owner
 
 Markus Kraus [@vMarkus_K](https://twitter.com/vMarkus_K)
 
 MY CLOUD-(R)EVOLUTION [mycloudrevolution.com](http://mycloudrevolution.com/)
 
-### Project WebSite:
+### Project WebSite
 
 [mycloudrevolution.com](http://mycloudrevolution.com/)
 
 ### Project Repository
 
-[vSphereNetAppToolkit](https://github.com/mycloudrevolution/vSphereNetAppToolkit)
+[GitHub - vSphereNetAppToolkit](https://github.com/mycloudrevolution/vSphereNetAppToolkit)
 
-### Project Documentation:
+### Project Documentation
 
-[Read the Docs](http://readthedocs.io/)
+[Read the Docs - vSphereNetAppToolkit](https://vspherenetapptoolkit.readthedocs.io)
 
-### Project Description:
+### Project Description
 
 This Module helps to automate some basic steps that interact between VMware vSphere and NetApp.
 
