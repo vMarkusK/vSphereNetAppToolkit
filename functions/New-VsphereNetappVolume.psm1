@@ -139,7 +139,7 @@ function New-VsphereNetappVolume {
         }catch{ Throw "Failed to get NetApp Interface)" }
 
         try {
-            $NetAppSnapshotPolicy = Get-NcNetInterface -Name $NetAppSnapshotPolicyName
+            $NetAppSnapshotPolicy = Get-NcSnapshotPolicy -Name $NetAppSnapshotPolicyName
         }catch{ Throw "Failed to get NetApp Snapshot Policy)" }
 
 
