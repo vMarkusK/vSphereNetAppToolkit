@@ -1,7 +1,7 @@
-Welcome to my <%=$PLASTER_PARAM_ModuleName%> Module
+Welcome to my vSphereNetAppToolkit PowerShell Module
 ========================
 
-This is the basic documentation of the '<%=$PLASTER_PARAM_ModuleName%>' PowerShell Module.
+This Module helps to automate some basic steps that interact between VMware vSphere and NetApp.
 
 
 * :ref:`feature-docs`

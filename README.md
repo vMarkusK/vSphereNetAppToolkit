@@ -22,7 +22,7 @@ MY CLOUD-(R)EVOLUTION [mycloudrevolution.com](http://mycloudrevolution.com/)
 
 ### Project Description:
 
-The 'vSphereNetAppToolkit' PowerShell Module ...
+This Module helps to automate some basic steps that interact between VMware vSphere and NetApp.
 
 ## Requirements
 
