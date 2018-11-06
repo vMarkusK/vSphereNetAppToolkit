@@ -101,7 +101,6 @@ function New-VsphereNetappVolume {
 
         $NetAppSnapshotPolicyRuntimeParameter = New-Object System.Management.Automation.RuntimeDefinedParameter($NetAppSnapshotPolicyName, [string], $NetAppSnapshotPolicyAttributeCollection)
 
-
         # Create and return parameter dictionary
         $RuntimeParameterDictionary = New-Object System.Management.Automation.RuntimeDefinedParameterDictionary
         $RuntimeParameterDictionary.Add($vSphereClusterName, $vSphereClusterRuntimeParameter)
@@ -142,9 +141,6 @@ function New-VsphereNetappVolume {
             $NetAppSnapshotPolicy = Get-NcSnapshotPolicy -Name $NetAppSnapshotPolicyName
         }catch{ Throw "Failed to get NetApp Snapshot Policy)" }
 
-
-
-
         if ($DebugPreference -eq "Inquire") {
                 "vSphere Cluster:"
                 $vSphereCluster | Format-Table -Autosize
@@ -168,7 +164,6 @@ function New-VsphereNetappVolume {
         $IPs = ($vSphereCluster | Get-VMHost | Get-VMHostNetworkAdapter -VMKernel).IP
         $ClientMatch = $IPs -join ","
 
-
         if(!(Get-NcExportPolicy -Name $vSphereCluster.Name -VserverContext $NetAppVserver )){
             "Create new NetApp Export Policy '$($vSphereCluster.Name)' on SVM '$($NetAppVserver.Name)' ..."
             $NetAppExportPolicy = New-NcExportPolicy -Name $vSphereCluster.Name -VserverContext $NetAppVserver
@@ -176,11 +171,11 @@ function New-VsphereNetappVolume {
             -Protocol NFS -Index 1 -SuperUserSecurityFlavor any -ReadOnlySecurityFlavor any -ReadWriteSecurityFlavor any
         }else{"NetApp Export Policy '$($vSphereCluster.Name)' on SVM '$($NetAppVserver.Name)' aleady exists"}
 
-
         "Create new NetApp Volume '$VolName' on Aggregate '$($NetAppAggr.AggregateName)' ..."
         $NetAppVolume = New-NcVol -VserverContext $NetAppVserver -Name $VolName -Aggregate $NetAppAggr.AggregateName -JunctionPath $("/" + $VolName) `
         -ExportPolicy $vSphereCluster.Name -Size $VolSizeByte -SnapshotReserve 20 -SnapshotPolicy $NetAppSnapshotPolicy.Policy
 
+        "Set Advanced Options for NetApp Volume '$VolName' ..."
         $NetAppVolume | Set-NcVolOption -Key fractional_reserve -Value 0
         $NetAppVolume | Set-NcVolOption -Key guarantee -Value none
         $NetAppVolume | Set-NcVolOption -key no_atime_update -Value on
@@ -188,7 +183,7 @@ function New-VsphereNetappVolume {
         $VMHosts = $vSphereCluster | Get-VMHost
         ForEach ($VMHost in $VMHosts) {
             "Add new NetApp Datastore '$($NetAppVolume.Name)' to ESXi Host '$($VMHost.Name)' ..."
-            $NewDaatstore = $VMHost | New-Datastore -Nfs -Name $NetAppVolume.Name  -Path $("/" + $NetAppVolume.Name) -NfsHost $NetAppInterface.Address
+            $NewDatastore = $VMHost | New-Datastore -Nfs -Name $NetAppVolume.Name  -Path $("/" + $NetAppVolume.Name) -NfsHost $NetAppInterface.Address
         }
 
     }
