@@ -107,7 +107,7 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        # ReleaseNotes = ''
+        ReleaseNotes = 'https://github.com/mycloudrevolution/vSphereNetAppToolkit/blob/master/ReleaseNotes.md'
 
     } # End of PSData hashtable
 
