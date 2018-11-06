@@ -1,11 +1,46 @@
 function New-VsphereNetappVolume {
+    <#
+    .DESCRIPTION
+        Creates a new a NetApp Volume and mounts it to ESXi Hosts.
+
+    .NOTES
+        File Name  : New-VsphereNetappVolume.psm1
+        Author     : Markus Kraus
+        Version    : 1.0
+        State      : Ready
+
+    .LINK
+        https://mycloudrevolution.com/
+
+    .EXAMPLE
+        New-VsphereNetappVolume -VolName vol_vmware_11 -VolSize 1 -vSphereCluster Cluster01 -NetAppAggregate aggr_data -NetAppVserver svm-esxi -NetAppInterface svm-nfs_data -NetAppSnapshotPolicy default-1weekly
+
+    .PARAMETER VolName
+        Name of the new Volume
+
+    .PARAMETER VolSize
+        Size of the new Volume in GB
+
+    .PARAMETER vSphereClusterName
+        Name of the vSphere Cluster where the Volume needs to be mounted
+
+    .PARAMETER NetAppAggregateName
+        Name of the Aggregate where the Volume is created
+
+    .PARAMETER NetAppVserverName
+        Name of the SVM where the Volume is created
+
+    .PARAMETER NetAppInterfaceName
+        Name of the Interface that should be used for the mount
+
+    #>
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$True, ValueFromPipeline=$False, HelpMessage="Name of the New Volume")]
+        [Parameter(Mandatory=$True, ValueFromPipeline=$False, HelpMessage="Name of the new Volume")]
         [ValidateNotNullorEmpty()]
             [String]$VolName,
-        [Parameter(Mandatory=$True, ValueFromPipeline=$False, HelpMessage="Size of the New Volume in GB")]
+        [Parameter(Mandatory=$True, ValueFromPipeline=$False, HelpMessage="Size of the new Volume in GB")]
         [ValidateNotNullorEmpty()]
             [int]$VolSize
     )
