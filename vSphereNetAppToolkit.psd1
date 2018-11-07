@@ -51,7 +51,7 @@ PowerShellVersion = '4.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-#RequiredModules = @('VMware.VimAutomation.Core', 'DataONTAP')
+RequiredModules = @('VMware.VimAutomation.Core', 'DataONTAP')
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
