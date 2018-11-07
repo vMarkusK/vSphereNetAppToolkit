@@ -98,7 +98,7 @@ PrivateData = @{
         Tags = @('VMware','vSphere', 'NetApp')
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://raw.githubusercontent.com/mycloudrevolution/vSphereNetAppToolkit/master/LICENSE'
 
         # A URL to the main website for this project.
         ProjectUri = 'https://github.com/mycloudrevolution/vSphereNetAppToolkit'
