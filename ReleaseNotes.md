@@ -9,5 +9,10 @@ November, 2018
 
 - Update Meta Infos: License, Required Modules
 
+## What is New in vSphereNetAppToolkit 0.1.2
+November, 2018
+
+- Fix: Volume Snapshot Policy
+
 ### Feedback
 Please send your feedback to https://github.com/mycloudrevolution/vSphereNetAppToolkit/issues

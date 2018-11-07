@@ -6,7 +6,7 @@ function New-VsphereNetappVolume {
     .NOTES
         File Name  : New-VsphereNetappVolume.psm1
         Author     : Markus Kraus
-        Version    : 1.0
+        Version    : 1.1
         State      : Ready
 
     .LINK
@@ -154,6 +154,7 @@ function New-VsphereNetappVolume {
         $NetAppAggregateName = $PsBoundParameters[$NetAppAggregateName]
         $NetAppVserverName = $PsBoundParameters[$NetAppVserverName]
         $NetAppInterfaceName = $PsBoundParameters[$NetAppInterfaceName]
+        $NetAppSnapshotPolicyName = $PsBoundParameters[$NetAppSnapshotPolicyName]
 
         # Get real objects from parameters
         try {
