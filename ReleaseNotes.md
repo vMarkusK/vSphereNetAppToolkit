@@ -20,6 +20,7 @@ November, 2018
 - Fix: Volume Snapshot Policy
 
 ## What is New in vSphereNetAppToolkit 0.2.0
+
 November, 2018
 
 - New Function: Get-VsphereNetappVolume
