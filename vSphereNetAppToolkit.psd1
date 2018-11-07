@@ -12,7 +12,7 @@
 # RootModule = 'functions/vSphereNetAppToolkit.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.1.1'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -51,7 +51,7 @@ PowerShellVersion = '4.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @('VMware.VimAutomation.Core', 'DataONTAP')
+RequiredModules = @('VMware.VimAutomation.Core')
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
@@ -108,6 +108,9 @@ PrivateData = @{
 
         # ReleaseNotes of this module
         ReleaseNotes = 'https://github.com/mycloudrevolution/vSphereNetAppToolkit/blob/master/ReleaseNotes.md'
+
+        # External Module Dependencies
+        ExternalModuleDependencies = @('DataONTAP')
 
     } # End of PSData hashtable
 
