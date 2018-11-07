@@ -30,7 +30,7 @@ CompanyName = 'mycloudrevolution.com'
 Copyright = '(c) 2018 Markus Kraus. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'vSphereNetAppToolkit PowerShell Module'
+Description = 'This Module helps to automate some basic steps that interact between VMware vSphere and NetApp ONTAP.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '4.0'
