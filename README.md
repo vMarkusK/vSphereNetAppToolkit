@@ -22,7 +22,7 @@ MY CLOUD-(R)EVOLUTION [mycloudrevolution.com](http://mycloudrevolution.com/)
 
 ### Project Description
 
-This Module helps to automate some basic steps that interact between VMware vSphere and NetApp.
+This Module helps to automate some basic steps that interact between VMware vSphere and NetApp ONTAP.
 
 ## Requirements
 
