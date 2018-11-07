@@ -47,3 +47,11 @@ New-VsphereNetappVolume -VolName vol_vmware_11 -VolSize 1 -vSphereCluster Cluste
 
 ![New-VsphereNetappVolume](/media/New-VsphereNetappVolume.png)
 
+## Get-VsphereNetappVolume
+
+ ```PowerShell
+(Get-Datastore).Where({$_.Type -eq "NFS"}) | Get-VsphereNetappVolume | Format-Table -AutoSize
+```
+
+![Get-VsphereNetappVolume](/media/Get-VsphereNetappVolume.png)
+

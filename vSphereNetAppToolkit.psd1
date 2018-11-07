@@ -12,7 +12,7 @@
 # RootModule = 'functions/vSphereNetAppToolkit.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.2'
+ModuleVersion = '0.2.0'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -66,10 +66,10 @@ RequiredModules = @('VMware.VimAutomation.Core')
 # FormatsToProcess = @()
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-NestedModules = @('functions/New-VsphereNetappVolume.psm1')
+NestedModules = @('functions/New-VsphereNetappVolume.psm1', 'functions/Get-VsphereNetappVolume.psm1')
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = 'New-VsphereNetappVolume'
+FunctionsToExport = 'New-VsphereNetappVolume', 'Get-VsphereNetappVolume'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 #CmdletsToExport = '*'
